@@ -2,3 +2,148 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> */
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  width: 340px;
+  background-color: hsl(216, 50%, 16%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 16px -2px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.img_section {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.eq_img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: hsl(178, 100%, 50%);
+}
+
+.view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+}
+
+.img_section:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.img_section:hover .overlay + .view {
+  display: block;
+}
+
+.nft_name {
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nft_name:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.nft_information {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.nft_value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding-bottom: 25px;
+}
+
+.value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: hsl(178, 100%, 50%);
+  font-weight: 700;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: hsl(215, 51%, 70%);
+}
+
+.nft_icon {
+  margin-right: 5px;
+}
+
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.avatar_img {
+  width: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.author_info {
+  color: hsl(215, 51%, 70%);
+}
+
+.author_info span {
+  color: white;
+}
